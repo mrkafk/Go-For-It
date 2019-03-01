@@ -1,0 +1,30 @@
+[Desktop Entry]
+Name=Go For It!
+GenericName=Go For It!
+Comment=A stylish to-do list with built-in productivity timer
+Comment[cs]=Stylový úkolovník se zabudovaným časovačem produktivity
+Comment[fr]=Une liste de tâches élégante avec chronomètre de productivité intégré
+Comment[lt]=Stilingas užduočių sąrašas su įtaisytu produktyvumo laikmačiu
+Comment[nl]=Een stijlvolle takenlijst met ingebouwde productiviteitstimer
+Categories=GTK;Utility;
+Exec=com.github.jmoerman.go-for-it
+Icon=com.github.jmoerman.go-for-it
+Terminal=false
+Type=Application
+StartupWMClass=com.github.jmoerman.go-for-it
+X-GNOME-Gettext-Domain=com.github.jmoerman.go-for-it
+Keywords=Productivity;Todo.txt;Todo;Timer;Task;PIM;Time Management;
+Keywords[cs]=Produktivita;Todo.txt;udělat;časovač,úkol,PIM;správa času;
+Keywords[fr]=Productivité;Todo.txt;A faire;Chronomètre;Tâche;PIM;Gestion du temps;
+Keywords[lt]=Produktyvumas;Užduotys.txt;Užduotys;Laikmatis;Užduotis;PIM;Laiko paskirstymas;Laiko valdymas;
+Keywords[nl]=Productiviteit;Todo.txt;Todo;Timer;Taak;PIM;Tijd Management;
+X-GNOME-Keywords=Productivity;Todo.txt;Todo;Timer;Task;PIM;Time Management;
+X-GNOME-Keywords[cs]=Produktivita;Todo.txt;udělat;časovač,úkol,PIM;správa času;
+X-GNOME-Keywords[fr]=Productivité;Todo.txt;A faire;Chronomètre;Tâche;PIM;Gestion du temps;
+X-GNOME-Keywords[lt]=Produktyvumas;Užduotys.txt;Užduotys;Laikmatis;Užduotis;PIM;Laiko paskirstymas;Laiko valdymas;
+X-GNOME-Keywords[nl]=Productiviteit;Todo.txt;Todo;Timer;Taak;PIM;Tijd Management;
+Actions=AboutDialog;
+
+[Desktop Action AboutDialog]
+Name=About Go For It!
+Exec=com.github.jmoerman.go-for-it --about

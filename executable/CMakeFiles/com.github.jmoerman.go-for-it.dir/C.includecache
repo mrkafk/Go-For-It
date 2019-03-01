@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mark/projects/Go-For-It/executable/go-for-it.c
+glib.h
+-
+glib-object.h
+-
+stdlib.h
+-
+string.h
+-
+locale.h
+-
+glib/gi18n-lib.h
+-
+com.github.jmoerman.go-for-it-0_internal.h
+/home/mark/projects/Go-For-It/executable/com.github.jmoerman.go-for-it-0_internal.h
+gio/gio.h
+-
+
+src/com.github.jmoerman.go-for-it-0_internal.h
+glib.h
+-
+stdlib.h
+-
+string.h
+-
+glib-object.h
+-
+gtk/gtk.h
+-
+gio/gio.h
+-
+

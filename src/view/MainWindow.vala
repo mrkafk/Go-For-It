@@ -327,6 +327,7 @@ class MainWindow : Gtk.ApplicationWindow {
 
             try {
                 notification.show ();
+                this.deiconify();
             } catch (GLib.Error err){
                 GLib.stderr.printf(
                     "Error in notify! (break_active notification)\n");

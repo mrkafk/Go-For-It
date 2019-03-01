@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/com.github.jmoerman.go-for-it.dir/go-for-it.c.o  -o com.github.jmoerman.go-for-it -rdynamic ../src/libcom.github.jmoerman.go-for-it-0.a -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lnotify -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lm 

@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+f636cfb0532e40be8be1296f994e33e1 executable/com.github.jmoerman.go-for-it_valac.stamp
+02dba3f1ab2e7b6bfc1216afa108ab95 executable/go-for-it.c
+e6bc14ac55b62d470d701b644a4ce815 src/Constants.c
+855dc94ef46524ba7c5b0c108a7cca30 src/com.github.jmoerman.go-for-it-0_valac.stamp
