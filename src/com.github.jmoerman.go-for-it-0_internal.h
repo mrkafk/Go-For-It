@@ -467,7 +467,7 @@ struct _MainClass {
 #define GOFI_PROJECT_WEBSITE "http://manuel-kehl.de/projects/go-for-it/"
 #define GOFI_PROJECT_REPO "https://github.com/JMoerman/Go-For-It"
 #define GOFI_PROJECT_DONATIONS "https://jmoerman.github.io/donate/"
-#define GOFI_INSTALL_PREFIX "/usr/local/gfi"
+#define GOFI_INSTALL_PREFIX "/usr"
 #define GOFI_GETTEXT_PACKAGE "com.github.jmoerman.go-for-it"
 GType gofi_feature_status_get_type (void) G_GNUC_CONST;
 gboolean gofi_feature_status_use_feature (GOFIFeatureStatus self, gboolean _default);

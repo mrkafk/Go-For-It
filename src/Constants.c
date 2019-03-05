@@ -36,7 +36,7 @@
 #define GOFI_PROJECT_WEBSITE "http://manuel-kehl.de/projects/go-for-it/"
 #define GOFI_PROJECT_REPO "https://github.com/JMoerman/Go-For-It"
 #define GOFI_PROJECT_DONATIONS "https://jmoerman.github.io/donate/"
-#define GOFI_INSTALL_PREFIX "/usr/local/gfi"
+#define GOFI_INSTALL_PREFIX "/usr"
 #define GOFI_GETTEXT_PACKAGE "com.github.jmoerman.go-for-it"
 
 const gchar* GOFI_TEST_DIRS[5] = {"Todo", "todo", ".todo", "Dropbox/Todo", "Dropbox/todo"};

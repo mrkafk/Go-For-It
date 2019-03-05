@@ -106,7 +106,7 @@ CMAKE_INSTALL_INCLUDEDIR:PATH=include
 CMAKE_INSTALL_INFODIR:PATH=
 
 //object code libraries (lib)
-CMAKE_INSTALL_LIBDIR:PATH=lib
+CMAKE_INSTALL_LIBDIR:PATH=lib/x86_64-linux-gnu
 
 //program executables (libexec)
 CMAKE_INSTALL_LIBEXECDIR:PATH=libexec
@@ -124,7 +124,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=/usr/local/gfi
+CMAKE_INSTALL_PREFIX:PATH=/usr
 
 //system admin executables (sbin)
 CMAKE_INSTALL_SBINDIR:PATH=sbin
@@ -467,7 +467,7 @@ PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: VALA_EXECUTABLE
 VALA_EXECUTABLE-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local/gfi
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr
 __pkg_config_checked_DEPS:INTERNAL=1
 prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
 

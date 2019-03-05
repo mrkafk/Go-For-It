@@ -1580,17 +1580,16 @@ static void main_window_task_timer_activated (MainWindow* self, TodoTask* task, 
 		{
 			NotifyNotification* _tmp19_ = NULL;
 #line 329 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+			gtk_window_deiconify ((GtkWindow*) self);
+#line 330 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 			_tmp19_ = notification;
-#line 329 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 330 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 			notify_notification_show (_tmp19_, &_inner_error_);
-#line 329 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 330 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 			if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 1589 "MainWindow.c"
+#line 1591 "MainWindow.c"
 				goto __catch9_g_error;
 			}
-#line 330 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
-			gtk_window_deiconify ((GtkWindow*) self);
-#line 1594 "MainWindow.c"
 		}
 		goto __finally9;
 		__catch9_g_error:
@@ -1607,7 +1606,7 @@ static void main_window_task_timer_activated (MainWindow* self, TodoTask* task, 
 			fprintf (_tmp20_, "Error in notify! (break_active notification)\n");
 #line 328 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 			_g_error_free0 (err);
-#line 1611 "MainWindow.c"
+#line 1610 "MainWindow.c"
 		}
 		__finally9:
 #line 328 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
@@ -1620,17 +1619,17 @@ static void main_window_task_timer_activated (MainWindow* self, TodoTask* task, 
 			g_clear_error (&_inner_error_);
 #line 328 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 			return;
-#line 1624 "MainWindow.c"
+#line 1623 "MainWindow.c"
 		}
 #line 313 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_g_object_unref0 (notification);
-#line 1628 "MainWindow.c"
+#line 1627 "MainWindow.c"
 	}
 #line 336 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp21_ = break_active;
 #line 336 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	main_window_set_break_previously_active (self, _tmp21_);
-#line 1634 "MainWindow.c"
+#line 1633 "MainWindow.c"
 }
 
 
@@ -1680,13 +1679,15 @@ static void main_window_display_almost_over_notification (MainWindow* self, GDat
 	_g_free0 (_tmp5_);
 #line 341 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	notification = _tmp9_;
-#line 1684 "MainWindow.c"
+#line 1683 "MainWindow.c"
 	{
 #line 345 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+		gtk_window_deiconify ((GtkWindow*) self);
+#line 346 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		notify_notification_show (notification, &_inner_error_);
-#line 345 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 346 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 1690 "MainWindow.c"
+#line 1691 "MainWindow.c"
 			goto __catch10_g_error;
 		}
 	}
@@ -1699,13 +1700,13 @@ static void main_window_display_almost_over_notification (MainWindow* self, GDat
 		err = _inner_error_;
 #line 344 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_inner_error_ = NULL;
-#line 347 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 348 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_tmp10_ = stderr;
-#line 347 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 348 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		fprintf (_tmp10_, "Error in notify! (remaining_time notification)\n");
 #line 344 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_g_error_free0 (err);
-#line 1709 "MainWindow.c"
+#line 1710 "MainWindow.c"
 	}
 	__finally10:
 #line 344 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
@@ -1718,11 +1719,11 @@ static void main_window_display_almost_over_notification (MainWindow* self, GDat
 		g_clear_error (&_inner_error_);
 #line 344 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		return;
-#line 1722 "MainWindow.c"
+#line 1723 "MainWindow.c"
 	}
 #line 339 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_g_object_unref0 (notification);
-#line 1726 "MainWindow.c"
+#line 1727 "MainWindow.c"
 }
 
 
@@ -1739,7 +1740,7 @@ static const gchar* string_to_string (const gchar* self) {
 	result = self;
 #line 1413 "/usr/share/vala-0.34/vapi/glib-2.0.vapi"
 	return result;
-#line 1743 "MainWindow.c"
+#line 1744 "MainWindow.c"
 }
 
 
@@ -1768,88 +1769,88 @@ static void main_window_load_css (MainWindow* self) {
 	gchar** _tmp16_ = NULL;
 	gchar** _tmp17_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 357 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 358 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	g_return_if_fail (self != NULL);
-#line 358 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 359 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp0_ = gtk_window_get_screen ((GtkWindow*) self);
-#line 358 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 359 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp1_ = _g_object_ref0 (_tmp0_);
-#line 358 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 359 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	screen = _tmp1_;
-#line 359 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 360 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp2_ = gtk_css_provider_new ();
-#line 359 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 360 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	css_provider = _tmp2_;
-#line 361 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 362 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp4_ = self->priv->settings;
-#line 361 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 362 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp5_ = settings_manager_get_use_dark_theme (_tmp4_);
-#line 361 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 362 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp6_ = _tmp5_;
-#line 361 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 362 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	if (_tmp6_) {
-#line 361 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 362 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_tmp3_ = "-dark";
-#line 1794 "MainWindow.c"
+#line 1795 "MainWindow.c"
 	} else {
-#line 361 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 362 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_tmp3_ = "";
-#line 1798 "MainWindow.c"
+#line 1799 "MainWindow.c"
 	}
-#line 361 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 362 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp7_ = g_strdup (_tmp3_);
-#line 361 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 362 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	color = _tmp7_;
-#line 362 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 363 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp9_ = gtk_get_minor_version ();
-#line 362 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 363 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	if (_tmp9_ >= ((guint) 19)) {
-#line 362 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 363 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_tmp8_ = "3.20";
-#line 1810 "MainWindow.c"
+#line 1811 "MainWindow.c"
 	} else {
-#line 362 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 363 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_tmp8_ = "3.10";
-#line 1814 "MainWindow.c"
+#line 1815 "MainWindow.c"
 	}
-#line 362 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 363 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp10_ = g_strdup (_tmp8_);
-#line 362 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 363 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	version = _tmp10_;
-#line 365 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 366 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp11_ = version;
-#line 365 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 366 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp12_ = string_to_string (_tmp11_);
-#line 365 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 366 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp13_ = color;
-#line 365 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 366 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp14_ = string_to_string (_tmp13_);
-#line 365 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 366 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp15_ = g_strconcat ("go-for-it-", _tmp12_, _tmp14_, ".css", NULL);
-#line 365 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 366 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	stylesheet = _tmp15_;
-#line 368 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 369 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp17_ = _tmp16_ = g_get_system_data_dirs ();
-#line 1834 "MainWindow.c"
+#line 1835 "MainWindow.c"
 	{
 		gchar** dir_collection = NULL;
 		gint dir_collection_length1 = 0;
 		gint _dir_collection_size_ = 0;
 		gint dir_it = 0;
-#line 368 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 369 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		dir_collection = _tmp17_;
-#line 368 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 369 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		dir_collection_length1 = _vala_array_length (_tmp16_);
-#line 368 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 369 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		for (dir_it = 0; dir_it < _vala_array_length (_tmp16_); dir_it = dir_it + 1) {
-#line 1846 "MainWindow.c"
+#line 1847 "MainWindow.c"
 			gchar* _tmp18_ = NULL;
 			gchar* dir = NULL;
-#line 368 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 369 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 			_tmp18_ = g_strdup (dir_collection[dir_it]);
-#line 368 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 369 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 			dir = _tmp18_;
-#line 1853 "MainWindow.c"
+#line 1854 "MainWindow.c"
 			{
 				gchar* path = NULL;
 				const gchar* _tmp19_ = NULL;
@@ -1857,50 +1858,50 @@ static void main_window_load_css (MainWindow* self) {
 				gchar* _tmp21_ = NULL;
 				const gchar* _tmp22_ = NULL;
 				gboolean _tmp23_ = FALSE;
-#line 370 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 371 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 				_tmp19_ = dir;
-#line 370 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 371 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 				_tmp20_ = stylesheet;
-#line 370 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 371 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 				_tmp21_ = g_build_filename (_tmp19_, GOFI_APP_SYSTEM_NAME, "style", _tmp20_, NULL);
-#line 370 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 371 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 				path = _tmp21_;
-#line 373 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 374 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 				_tmp22_ = path;
-#line 373 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 374 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 				_tmp23_ = g_file_test (_tmp22_, G_FILE_TEST_EXISTS);
-#line 373 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 374 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 				if (_tmp23_) {
-#line 1875 "MainWindow.c"
+#line 1876 "MainWindow.c"
 					{
 						GtkCssProvider* _tmp24_ = NULL;
 						const gchar* _tmp25_ = NULL;
 						GdkScreen* _tmp26_ = NULL;
 						GtkCssProvider* _tmp27_ = NULL;
-#line 375 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 376 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						_tmp24_ = css_provider;
-#line 375 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 376 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						_tmp25_ = path;
-#line 375 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 376 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						gtk_css_provider_load_from_path (_tmp24_, _tmp25_, &_inner_error_);
-#line 375 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 376 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 1889 "MainWindow.c"
+#line 1890 "MainWindow.c"
 							goto __catch11_g_error;
 						}
-#line 376 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 377 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						_tmp26_ = screen;
-#line 376 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 377 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						_tmp27_ = css_provider;
-#line 376 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 377 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						gtk_style_context_add_provider_for_screen (_tmp26_, (GtkStyleProvider*) _tmp27_, (guint) GTK_STYLE_PROVIDER_PRIORITY_USER);
-#line 378 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 379 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						_g_free0 (path);
-#line 378 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 379 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						_g_free0 (dir);
-#line 378 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 379 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						break;
-#line 1904 "MainWindow.c"
+#line 1905 "MainWindow.c"
 					}
 					goto __finally11;
 					__catch11_g_error:
@@ -1908,65 +1909,65 @@ static void main_window_load_css (MainWindow* self) {
 						GError* e = NULL;
 						GError* _tmp28_ = NULL;
 						const gchar* _tmp29_ = NULL;
-#line 374 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 375 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						e = _inner_error_;
-#line 374 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 375 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						_inner_error_ = NULL;
-#line 380 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 381 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						_tmp28_ = e;
-#line 380 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 381 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						_tmp29_ = _tmp28_->message;
-#line 380 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
-						g_warning ("MainWindow.vala:380: Cannot load CSS stylesheet: %s", _tmp29_);
-#line 374 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 381 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+						g_warning ("MainWindow.vala:381: Cannot load CSS stylesheet: %s", _tmp29_);
+#line 375 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						_g_error_free0 (e);
-#line 1924 "MainWindow.c"
+#line 1925 "MainWindow.c"
 					}
 					__finally11:
-#line 374 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 375 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 					if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 374 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 375 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						_g_free0 (path);
-#line 374 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 375 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						_g_free0 (dir);
-#line 374 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 375 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						_g_free0 (stylesheet);
-#line 374 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 375 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						_g_free0 (version);
-#line 374 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 375 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						_g_free0 (color);
-#line 374 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 375 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						_g_object_unref0 (css_provider);
-#line 374 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 375 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						_g_object_unref0 (screen);
-#line 374 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 375 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 374 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 375 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						g_clear_error (&_inner_error_);
-#line 374 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 375 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 						return;
-#line 1949 "MainWindow.c"
+#line 1950 "MainWindow.c"
 					}
 				}
-#line 368 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 369 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 				_g_free0 (path);
-#line 368 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 369 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 				_g_free0 (dir);
-#line 1956 "MainWindow.c"
+#line 1957 "MainWindow.c"
 			}
 		}
 	}
-#line 357 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 358 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_g_free0 (stylesheet);
-#line 357 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 358 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_g_free0 (version);
-#line 357 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 358 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_g_free0 (color);
-#line 357 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 358 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_g_object_unref0 (css_provider);
-#line 357 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 358 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_g_object_unref0 (screen);
-#line 1970 "MainWindow.c"
+#line 1971 "MainWindow.c"
 }
 
 
@@ -1984,38 +1985,38 @@ static void main_window_restore_win_geometry (MainWindow* self) {
 	SettingsManager* _tmp16_ = NULL;
 	gint _tmp17_ = 0;
 	gint _tmp18_ = 0;
-#line 389 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 390 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	g_return_if_fail (self != NULL);
-#line 390 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 391 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp1_ = self->priv->settings;
-#line 390 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 391 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp2_ = settings_manager_get_win_x (_tmp1_);
-#line 390 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 391 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp3_ = _tmp2_;
-#line 390 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 391 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	if (_tmp3_ == -1) {
-#line 390 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 391 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_tmp0_ = TRUE;
-#line 2000 "MainWindow.c"
+#line 2001 "MainWindow.c"
 	} else {
 		SettingsManager* _tmp4_ = NULL;
 		gint _tmp5_ = 0;
 		gint _tmp6_ = 0;
-#line 390 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 391 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_tmp4_ = self->priv->settings;
-#line 390 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 391 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_tmp5_ = settings_manager_get_win_y (_tmp4_);
-#line 390 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 391 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_tmp6_ = _tmp5_;
-#line 390 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 391 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_tmp0_ = _tmp6_ == -1;
-#line 2013 "MainWindow.c"
+#line 2014 "MainWindow.c"
 	}
-#line 390 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 391 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	if (_tmp0_) {
-#line 392 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 393 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		gtk_window_set_position ((GtkWindow*) self, GTK_WIN_POS_CENTER);
-#line 2019 "MainWindow.c"
+#line 2020 "MainWindow.c"
 	} else {
 		SettingsManager* _tmp7_ = NULL;
 		gint _tmp8_ = 0;
@@ -2023,37 +2024,37 @@ static void main_window_restore_win_geometry (MainWindow* self) {
 		SettingsManager* _tmp10_ = NULL;
 		gint _tmp11_ = 0;
 		gint _tmp12_ = 0;
-#line 394 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 395 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_tmp7_ = self->priv->settings;
-#line 394 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 395 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_tmp8_ = settings_manager_get_win_x (_tmp7_);
-#line 394 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 395 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_tmp9_ = _tmp8_;
-#line 394 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 395 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_tmp10_ = self->priv->settings;
-#line 394 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 395 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_tmp11_ = settings_manager_get_win_y (_tmp10_);
-#line 394 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 395 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		_tmp12_ = _tmp11_;
-#line 394 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 395 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		gtk_window_move ((GtkWindow*) self, _tmp9_, _tmp12_);
-#line 2041 "MainWindow.c"
+#line 2042 "MainWindow.c"
 	}
-#line 396 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 397 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp13_ = self->priv->settings;
-#line 396 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 397 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp14_ = settings_manager_get_win_width (_tmp13_);
-#line 396 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 397 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp15_ = _tmp14_;
-#line 396 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 397 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp16_ = self->priv->settings;
-#line 396 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 397 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp17_ = settings_manager_get_win_height (_tmp16_);
-#line 396 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 397 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp18_ = _tmp17_;
-#line 396 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 397 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	gtk_window_set_default_size ((GtkWindow*) self, _tmp15_, _tmp18_);
-#line 2057 "MainWindow.c"
+#line 2058 "MainWindow.c"
 }
 
 
@@ -2073,37 +2074,37 @@ static void main_window_save_win_geometry (MainWindow* self) {
 	SettingsManager* _tmp5_ = NULL;
 	SettingsManager* _tmp6_ = NULL;
 	SettingsManager* _tmp7_ = NULL;
-#line 402 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 403 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	g_return_if_fail (self != NULL);
-#line 404 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 405 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	gtk_window_get_position ((GtkWindow*) self, &_tmp0_, &_tmp1_);
-#line 404 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 405 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	x = _tmp0_;
-#line 404 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 405 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	y = _tmp1_;
-#line 405 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 406 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	gtk_window_get_size ((GtkWindow*) self, &_tmp2_, &_tmp3_);
-#line 405 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 406 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	width = _tmp2_;
-#line 405 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 406 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	height = _tmp3_;
-#line 408 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 409 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp4_ = self->priv->settings;
-#line 408 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 409 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	settings_manager_set_win_x (_tmp4_, x);
-#line 409 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 410 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp5_ = self->priv->settings;
-#line 409 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 410 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	settings_manager_set_win_y (_tmp5_, y);
-#line 410 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 411 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp6_ = self->priv->settings;
-#line 410 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 411 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	settings_manager_set_win_width (_tmp6_, width);
-#line 411 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 412 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	_tmp7_ = self->priv->settings;
-#line 411 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
+#line 412 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	settings_manager_set_win_height (_tmp7_, height);
-#line 2107 "MainWindow.c"
+#line 2108 "MainWindow.c"
 }
 
 
@@ -2118,7 +2119,7 @@ static gboolean main_window_get_break_previously_active (MainWindow* self) {
 	result = _tmp0_;
 #line 49 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	return result;
-#line 2122 "MainWindow.c"
+#line 2123 "MainWindow.c"
 }
 
 
@@ -2130,7 +2131,7 @@ static void main_window_set_break_previously_active (MainWindow* self, gboolean 
 	_tmp0_ = value;
 #line 49 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	self->priv->_break_previously_active = _tmp0_;
-#line 2134 "MainWindow.c"
+#line 2135 "MainWindow.c"
 }
 
 
@@ -2147,7 +2148,7 @@ static void main_window_class_init (MainWindowClass * klass) {
 	G_OBJECT_CLASS (klass)->set_property = _vala_main_window_set_property;
 #line 21 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	G_OBJECT_CLASS (klass)->finalize = main_window_finalize;
-#line 2151 "MainWindow.c"
+#line 2152 "MainWindow.c"
 }
 
 
@@ -2158,7 +2159,7 @@ static void main_window_instance_init (MainWindow * self) {
 	self->priv->refreshing = FALSE;
 #line 49 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	self->priv->_break_previously_active = FALSE;
-#line 2162 "MainWindow.c"
+#line 2163 "MainWindow.c"
 }
 
 
@@ -2200,7 +2201,7 @@ static void main_window_finalize (GObject* obj) {
 	_g_object_unref0 (self->priv->gtk_settings);
 #line 21 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	G_OBJECT_CLASS (main_window_parent_class)->finalize (obj);
-#line 2204 "MainWindow.c"
+#line 2205 "MainWindow.c"
 }
 
 
@@ -2224,13 +2225,13 @@ static void _vala_main_window_get_property (GObject * object, guint property_id,
 	self = G_TYPE_CHECK_INSTANCE_CAST (object, TYPE_MAIN_WINDOW, MainWindow);
 #line 21 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	switch (property_id) {
-#line 2228 "MainWindow.c"
+#line 2229 "MainWindow.c"
 		default:
 #line 21 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
 #line 21 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		break;
-#line 2234 "MainWindow.c"
+#line 2235 "MainWindow.c"
 	}
 }
 
@@ -2240,13 +2241,13 @@ static void _vala_main_window_set_property (GObject * object, guint property_id,
 	self = G_TYPE_CHECK_INSTANCE_CAST (object, TYPE_MAIN_WINDOW, MainWindow);
 #line 21 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 	switch (property_id) {
-#line 2244 "MainWindow.c"
+#line 2245 "MainWindow.c"
 		default:
 #line 21 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
 #line 21 "/home/mark/projects/Go-For-It/src/view/MainWindow.vala"
 		break;
-#line 2250 "MainWindow.c"
+#line 2251 "MainWindow.c"
 	}
 }
 
