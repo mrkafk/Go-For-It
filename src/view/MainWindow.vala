@@ -327,6 +327,8 @@ class MainWindow : Gtk.ApplicationWindow {
 
             try {
                 this.deiconify();
+                this.present();
+                this.show();
                 notification.show ();
             } catch (GLib.Error err){
                 GLib.stderr.printf(
@@ -343,6 +345,8 @@ class MainWindow : Gtk.ApplicationWindow {
             _("You have %s seconds left").printf (secs.to_string ()), GOFI.EXEC_NAME);
         try {
             this.deiconify();
+            this.present();
+            this.show();
             notification.show ();
         } catch (GLib.Error err){
             GLib.stderr.printf(
