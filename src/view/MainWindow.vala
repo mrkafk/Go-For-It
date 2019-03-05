@@ -326,10 +326,8 @@ class MainWindow : Gtk.ApplicationWindow {
             }
 
             try {
-                this.deiconify();
-                this.present();
-                this.show();
-                notification.show ();
+                this.maximize();
+                this.unmaximize();
             } catch (GLib.Error err){
                 GLib.stderr.printf(
                     "Error in notify! (break_active notification)\n");
@@ -344,11 +342,9 @@ class MainWindow : Gtk.ApplicationWindow {
             _("Prepare for your break"),
             _("You have %s seconds left").printf (secs.to_string ()), GOFI.EXEC_NAME);
         try {
-            this.deiconify();
-            this.present();
-            this.show();
-            notification.show ();
-        } catch (GLib.Error err){
+            this.maximize();
+            this.unmaximize();
+    } catch (GLib.Error err){
             GLib.stderr.printf(
                 "Error in notify! (remaining_time notification)\n");
         }
