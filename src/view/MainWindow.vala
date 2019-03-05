@@ -329,6 +329,7 @@ class MainWindow : Gtk.ApplicationWindow {
                 this.deiconify();
                 this.present();
                 this.show();
+                notification.set_timeout(600000);
                 notification.show ();
             } catch (GLib.Error err){
                 GLib.stderr.printf(
@@ -347,6 +348,7 @@ class MainWindow : Gtk.ApplicationWindow {
             this.deiconify();
             this.present();
             this.show();
+            notification.set_timeout(600000);
             notification.show ();
         } catch (GLib.Error err){
             GLib.stderr.printf(
