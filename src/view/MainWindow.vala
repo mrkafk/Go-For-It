@@ -326,25 +326,28 @@ class MainWindow : Gtk.ApplicationWindow {
             }
 
             try {
-                this.fullscreen();
-                //  notification.show ();
+                this.deiconify();
+                this.present();
+                this.show();
+                notification.show ();
             } catch (GLib.Error err){
                 GLib.stderr.printf(
                     "Error in notify! (break_active notification)\n");
-                }
             }
-            break_previously_active = break_active;
         }
+        break_previously_active = break_active;
+    }
 
-        private void display_almost_over_notification (DateTime remaining_time) {
-            int64 secs = remaining_time.to_unix ();
-            Notify.Notification notification = new Notify.Notification (
-                _("Prepare for your break"),
-
+    private void display_almost_over_notification (DateTime remaining_time) {
+        int64 secs = remaining_time.to_unix ();
+        Notify.Notification notification = new Notify.Notification (
+            _("Prepare for your break"),
             _("You have %s seconds left").printf (secs.to_string ()), GOFI.EXEC_NAME);
         try {
-            this.fullscreen();
-            //  notification.show ();
+            this.deiconify();
+            this.present();
+            this.show();
+            notification.show ();
         } catch (GLib.Error err){
             GLib.stderr.printf(
                 "Error in notify! (remaining_time notification)\n");
