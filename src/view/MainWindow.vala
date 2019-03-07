@@ -303,7 +303,7 @@ class MainWindow : Gtk.ApplicationWindow {
      */
     private void setup_notifications () {
         task_timer.active_task_changed.connect (task_timer_activated);
-        task_timer.timer_almost_over.connect (display_almost_over_notification);
+        //  task_timer.timer_almost_over.connect (display_almost_over_notification);
     }
 
     private void task_timer_activated (TodoTask? task, bool break_active) {
